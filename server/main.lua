@@ -18,9 +18,10 @@ AddEventHandler("qbr-stable:UpdateHorseComponents", function(components, idhorse
         local Player = QBCore.Functions.GetPlayer(src)
         local Playercid = Player.PlayerData.citizenid
         local id = idhorse
-        print("UpdateHorseComponents")
-        MySQL.Async.execute("UPDATE horses SET `components`='".. encodedComponents .."' WHERE `cid`=@cid AND `id`=@id", {cid = Playercid, id = id}, function(done)
-            TriggerClientEvent("qbr-stable:UpdadeHorseComponents", src, MyHorse_entity, components)
+        print("UpdateHorseComponents"..encodedComponents)
+        MySQL.Async.execute("UPDATE horses SET `components`=@components WHERE `cid`=@cid AND `id`=@id", {components = encodedComponents, cid = Playercid, id = id}, function(done)
+            print("ComponentsUpdated")
+            TriggerClientEvent("qbr-stable:client:UpdadeHorseComponents", src, MyHorse_entity, components)
         end)    
 end)
 
@@ -30,7 +31,6 @@ AddEventHandler("qbr-stable:CheckSelectedHorse", function()
         local src = source
         local Player = QBCore.Functions.GetPlayer(src)
         local Playercid = Player.PlayerData.citizenid
-        local license = Player.PlayerData.license
 
         MySQL.Async.fetchAll('SELECT * FROM horses WHERE `cid`=@cid;', {cid = Playercid}, function(horses)
             if #horses ~= 0 then
