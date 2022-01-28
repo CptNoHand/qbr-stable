@@ -545,8 +545,8 @@ RegisterNUICallback("loadMyHorse", function(data)
     end
 )
 
-RegisterNetEvent('qbr-stable:UpdadeHorseComponents')
-AddEventHandler('qbr-stable:UpdadeHorseComponents', function(horseEntity, components)
+RegisterNetEvent('qbr-stable:client:UpdadeHorseComponents')
+AddEventHandler('qbr-stable:client:UpdadeHorseComponents', function(horseEntity, components)
     for _, value in pairs(components) do
         NativeSetPedComponentEnabled(horseEntity, value)
     end
@@ -651,7 +651,7 @@ function CloseStable()
         }
         local DadosEncoded = json.encode(dados)
 
-        if DadosEncoded ~= "[]" then            
+        if DadosEncoded ~= "{}" then            
             TriggerServerEvent("qbr-stable:UpdateHorseComponents", dados, IdMyHorse, MyHorse_entity ) 
         end
 
