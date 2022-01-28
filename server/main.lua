@@ -18,9 +18,7 @@ AddEventHandler("qbr-stable:UpdateHorseComponents", function(components, idhorse
         local Player = QBCore.Functions.GetPlayer(src)
         local Playercid = Player.PlayerData.citizenid
         local id = idhorse
-        print("UpdateHorseComponents"..encodedComponents)
         MySQL.Async.execute("UPDATE horses SET `components`=@components WHERE `cid`=@cid AND `id`=@id", {components = encodedComponents, cid = Playercid, id = id}, function(done)
-            print("ComponentsUpdated")
             TriggerClientEvent("qbr-stable:client:UpdadeHorseComponents", src, MyHorse_entity, components)
         end)    
 end)
@@ -50,7 +48,6 @@ AddEventHandler("qbr-stable:AskForMyHorses", function()
         local components = nil
         local Player = QBCore.Functions.GetPlayer(src)
         local Playercid = Player.PlayerData.citizenid
-        print("AskForMyHorses")
         MySQL.Async.fetchAll('SELECT * FROM horses WHERE `cid`=@cid;', {cid = Playercid}, function(horses)
             if horses[1]then
                 horseId = horses[1].id
@@ -82,7 +79,9 @@ AddEventHandler("qbr-stable:BuyHorse", function(data, name)
             end
             Wait(200)
             if data.IsGold then
-                if Player.Functions.RemoveMoney("bank", data.Gold, "stable-bought-horse") then
+                local currentBank = Player.Functions.GetMoney('bank')
+                if data.Gold <= currentBank then
+                    local bank = Player.Functions.RemoveMoney("bank", data.Gold, "stable-bought-horse")
                     TriggerEvent('qbr-log:server:CreateLog', 'shops', 'Stable', 'green', "**"..GetPlayerName(Player.PlayerData.source) .. " (citizenid: "..Player.PlayerData.citizenid.." | id: "..Player.PlayerData.source..")** bought a horse for $"..data.Gold..".")
                 else
                     print('not enough money')
