@@ -17,6 +17,5 @@ CREATE TABLE IF NOT EXISTS `horses` (
   `model` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
   `components`  varchar(5000) NOT NULL DEFAULT '{}',
-  PRIMARY KEY (`id`),
-  KEY `FK_horses_characters` (`charid`)
+  PRIMARY KEY (`id`)
 );
