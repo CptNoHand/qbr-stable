@@ -2,11 +2,11 @@ Config = {}
 
 Config.Stables = {
     Valentine = {
-        Pos = {x=-367.73, y=787.72, z=116.26},
+		Pos = vector3(-367.73, 787.72, 116.26),
 		Name = 'Stable',
         Heading = -30.65,
 		SpawnPoint = {
-			Pos = {x=-372.43, y=791.79, z=116.13},
+			Pos = vector3(-372.43, 791.79, 116.13),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 182.3
         }
