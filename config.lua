@@ -1,55 +1,55 @@
 Config = {}
 
 Config.Stables = {
-    Valentine = {
+	Valentine = {
 		Pos = vector3(-367.73, 787.72, 116.26),
 		Name = 'Stable Valentine',
-        Heading = -30.65,
+        	Heading = -30.65,
 		SpawnPoint = {
 			Pos = vector3(-372.43, 791.79, 116.13),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 182.3
-        }
-    },
+        	}
+    	},
 	Blackwater = {
 		Pos = vector3(-864.84, -1365.96, 43.54),
 		Name = 'Stable Blackwater',
-        Heading = -30.65,
+        	Heading = -30.65,
 		SpawnPoint = {
 			Pos = vector3(-867.74, -1361.69, 43.66),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 178.59
-        }
-    },
+        	}
+    	},
 	SaintDenis = {
 		Pos = vector3(2503.13, -1449.08, 46.3),
 		Name = 'Stable Saint Denis',
-        Heading = -30.65,
+        	Heading = -30.65,
 		SpawnPoint = {
 			Pos = vector3(2508.41, -1446.89, 46.4),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 87.88
-        }		
+        	}		
 	},
 	Annesburg = {
 		Pos = vector3(2972.35, 1425.35, 44.67),
 		Name = 'Stable Annesburg',
-        Heading = -30.65,
+        	Heading = -30.65,
 		SpawnPoint = {
 			Pos = vector3(2970.43, 1429.35, 44.7),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 223.94
-        }		
+        	}		
 	},
 	Rhodes = {
 		Pos = vector3(1321.46, -1358.66, 78.39),
 		Name = 'Stable Rhodes',
-        Heading = -30.65,
+        	Heading = -30.65,
 		SpawnPoint = {
 			Pos = vector3(1318.74, -1354.64, 78.18),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 249.45
-        }		
+        	}		
 	},		
 }
 
