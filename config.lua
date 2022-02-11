@@ -50,6 +50,16 @@ Config.Stables = {
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 249.45
         	}		
+	},
+	Tumbleweed = {
+		Pos = vector3(-5519.43, -3043.45, -2.39),
+		Name = 'Stable Tumbleweed',
+        	Heading = 0.0,
+		SpawnPoint = {
+			Pos = vector3(-5522.14, -3039.16, -2.29),
+			CamPos = {x=1, y=-3, z=0},
+			Heading = 189.93
+        	}		
 	},		
 }
 
