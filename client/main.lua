@@ -26,7 +26,7 @@ local saddles = {}
 local stirrups = {}
 local acsluggage = {}
 local promptGroup
-local varStringCasa = CreateVarString(10, "LITERAL_STRING", "Estabulo")
+local varStringCasa = CreateVarString(10, "LITERAL_STRING", Lang:t('stable.stable'))
 local blip
 local prompts = {}
 local SpawnPoint = {}
@@ -158,7 +158,7 @@ local function SetHorseName(data)
     local HorseName = ""
 	
 	CreateThread(function()
-		AddTextEntry('FMMC_MPM_NA', "Name your horse:")
+		AddTextEntry('FMMC_MPM_NA', Lang:t('stable.set_name'))
 		DisplayOnscreenKeyboard(1, "FMMC_MPM_NA", "", "", "", "", "", 30)
 		while (UpdateOnscreenKeyboard() == 0) do
 			DisableAllControlActions(0);
@@ -225,9 +225,9 @@ local function InitiateHorse(atCoords)
         end
 
         if horseModel == nil and horseName == nil then
-            horseModel = "A_C_Horse_MP_Mangy_Backup"
-            horseName = "Pangaré"
-            horseComponents = nil
+            --horseModel = "A_C_Horse_MP_Mangy_Backup"
+            --horseName = "Pangaré"
+            --horseComponents = nil
         end
     end
 

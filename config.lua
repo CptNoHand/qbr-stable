@@ -9,8 +9,8 @@ Config.Stables = {
 			Pos = vector3(-372.43, 791.79, 116.13),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 182.3
-        	}
-    	},
+        }
+    },
 	Blackwater = {
 		Pos = vector3(-864.84, -1365.96, 43.54),
 		Name = 'Stable Blackwater',
@@ -19,8 +19,8 @@ Config.Stables = {
 			Pos = vector3(-867.74, -1361.69, 43.66),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 178.59
-        	}
-    	},
+        }
+    },
 	SaintDenis = {
 		Pos = vector3(2503.13, -1449.08, 46.3),
 		Name = 'Stable Saint Denis',
@@ -29,7 +29,7 @@ Config.Stables = {
 			Pos = vector3(2508.41, -1446.89, 46.4),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 87.88
-        	}		
+        }		
 	},
 	Annesburg = {
 		Pos = vector3(2972.35, 1425.35, 44.67),
@@ -39,7 +39,7 @@ Config.Stables = {
 			Pos = vector3(2970.43, 1429.35, 44.7),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 223.94
-        	}		
+        }		
 	},
 	Rhodes = {
 		Pos = vector3(1321.46, -1358.66, 78.39),
@@ -49,7 +49,7 @@ Config.Stables = {
 			Pos = vector3(1318.74, -1354.64, 78.18),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 249.45
-        	}		
+        }		
 	},
 	Tumbleweed = {
 		Pos = vector3(-5519.43, -3043.45, -2.39),
@@ -59,7 +59,7 @@ Config.Stables = {
 			Pos = vector3(-5522.14, -3039.16, -2.29),
 			CamPos = {x=1, y=-3, z=0},
 			Heading = 189.93
-        	}		
+        }		
 	},		
 }
 

@@ -9,7 +9,10 @@ version '1.0.0'
 dependencies {
 	'qbr-core'
 }
+
 shared_scripts {
+	'@qbr-core/shared/locale.lua',
+    'locale/en.lua',
 	'config.lua'
 }
 client_scripts {
