@@ -215,22 +215,6 @@ local function InitiateHorse(atCoords)
 
     initializing = true
 
-    if horseModel == nil and horseName == nil then
-        TriggerServerEvent("VP:HORSE:RequestMyHorseInfo")
-
-        local timeoutatgametimer = GetGameTimer() + (3 * 1000)
-
-        while horseModel == nil and timeoutatgametimer > GetGameTimer() do
-            Wait(0)
-        end
-
-        if horseModel == nil and horseName == nil then
-            --horseModel = "A_C_Horse_MP_Mangy_Backup"
-            --horseName = "Pangaré"
-            --horseComponents = nil
-        end
-    end
-
     if SpawnplayerHorse ~= 0 then
         DeleteEntity(SpawnplayerHorse)
         SpawnplayerHorse = 0
